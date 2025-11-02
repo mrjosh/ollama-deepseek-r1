@@ -27,5 +27,5 @@ done
 # set container as ready
 touch /tmp/ready
 
-# start nginx
-bash -c /start.sh
+# start
+bash start.sh
