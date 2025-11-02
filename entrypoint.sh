@@ -28,5 +28,4 @@ done
 touch /tmp/ready
 
 # start nginx
-service nginx start;
-npm start;
+bash -c /start.sh
