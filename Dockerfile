@@ -19,4 +19,10 @@ COPY --from=chatbotui /app/package*.json ./
 COPY --from=chatbotui /app/next.config.js ./next.config.js
 COPY --from=chatbotui /app/next-i18next.config.js ./next-i18next.config.js
 
+ENV DEFAULT_MODEL "deepseek-r1:7b"
+ENV OPENAI_API_HOST "http://localhost:8080"
+
+
+EXPOSE 8080
+
 ENTRYPOINT ["/entrypoint.sh"]
