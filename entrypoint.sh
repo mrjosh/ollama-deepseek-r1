@@ -24,4 +24,5 @@ done
 touch /tmp/ready
 
 # start nginx
-nginx -g "daemon off;"
+service start nginx;
+npm start;
