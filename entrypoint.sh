@@ -1,4 +1,8 @@
-# ./ollama-entrypoint.sh
+#!/bin/bash
+
+export DEBIAN_FRONTEND=noninteractive
+set -e
+
 # clear ready flag
 rm -f /tmp/ready
 
