@@ -1,8 +1,8 @@
 FROM ghcr.io/mckaywrigley/chatbot-ui:main as chatbotui
 FROM ollama/ollama:0.12.9
 
-RUN apt update && 
-    apt install -y curl nginx nodejs && 
+RUN apt update && \
+    apt install -y curl nginx nodejs && \
       rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint.sh /entrypoint.sh
