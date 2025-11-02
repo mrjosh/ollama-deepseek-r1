@@ -28,5 +28,5 @@ done
 touch /tmp/ready
 
 # start nginx
-service start nginx;
+service nginx start;
 npm start;
