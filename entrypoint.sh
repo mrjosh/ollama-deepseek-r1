@@ -13,7 +13,6 @@ vllm serve $MODEL \
   --gpu-memory-utilization 0.90 \
   --dtype float16 \
   --max-num-batched-tokens 1024 \
-  --batch-size 1 \
   --tensor-parallel-size 1 &
 
 # start ollama, wait for it to serve
