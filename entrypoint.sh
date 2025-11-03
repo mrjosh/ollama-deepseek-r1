@@ -14,8 +14,8 @@ vllm serve $MODEL \
   --dtype float16 \
   --max-num-batched-tokens 1024 \
   --tensor-parallel-size 1 \
-  --enable‐prefix‐caching \
-  --kv‐cache‐dtype auto &
+  --enable-prefix-caching \
+  --kv-cache-dtype auto &
 
 # start ollama, wait for it to serve
 echo "Starting VLLM..."
