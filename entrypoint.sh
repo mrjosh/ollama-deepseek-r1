@@ -6,7 +6,7 @@ set -e
 # clear ready flag
 rm -f /tmp/ready
 
-vllm serve &
+vllm serve deepseek-ai/DeepSeek-R1 --host 0.0.0.0 --port 8000 &
 
 # start ollama, wait for it to serve
 echo "Starting VLLM..."
