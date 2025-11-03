@@ -6,7 +6,15 @@ set -e
 # clear ready flag
 rm -f /tmp/ready
 
-vllm serve $MODEL --host 0.0.0.0 --port 8000 &
+vllm serve $MODEL \
+  --host 0.0.0.0 \
+  --port 8000 \
+  --max-model-len 36000 \
+  --gpu-memory-utilization 0.90 \
+  --dtype float16 \
+  --max-num-batched-tokens 1024 \
+  --batch-size 1 \
+  --tensor-parallel-size 1 &
 
 # start ollama, wait for it to serve
 echo "Starting VLLM..."
