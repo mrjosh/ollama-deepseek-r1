@@ -6,14 +6,14 @@ set -e
 # clear ready flag
 rm -f /tmp/ready
 
-vllm serve $MODEL \
-  --host 0.0.0.0 \
-  --port 8000 \
-  --max-model-len 36000 \
-  --gpu-memory-utilization 0.90 \
-  --dtype float16 \
-  --max-num-batched-tokens 1024 \
-  --tensor-parallel-size 1 \
+vllm serve $VLLM_MODEL \
+  --host $VLLM_HOST \
+  --port $VLLM_PORT \
+  --max-model-len $VLLM_MAX_MODEL_LEN \
+  --gpu-memory-utilization $VLLM_GPU_MEMORY_UTILIZATION \
+  --dtype $VLLM_D_TYPE \
+  --max-num-batched-tokens $VLLM_MAX_NUM_BATCHED_TOKENS \
+  --tensor-parallel-size $VLLM_TENSOR_PARALLEL_SIZE \
   --enable-prefix-caching \
   --kv-cache-dtype auto &
 
